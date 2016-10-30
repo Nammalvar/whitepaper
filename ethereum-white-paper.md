@@ -44,7 +44,7 @@ Le mécanisme de la preuve de travail fut une découverte capitale car il a rés
 
 ### Bitcoin en tant que système de transition d'état
 
-![statetransition.png](http://vitalik.ca/files/statetransition.png?2)
+![statetransition.png](images/statetransition.png?raw=true)
 
 D'un point de vue technique, le registre d'une crypto-monnaie telle que Bitcoin peut être considéré comme un système de transition d'état où il y a un « état » consistant en l'état de la propriété de tous les bitcoins existants et une « fonction de transition d'état » qui prend un état et une transaction, résultant en un nouvel état. Dans un système bancaire classique, par exemple, l'état est un bilan, une transaction est une demande de déplacer X€ de A à B, et la fonction de transition d'état réduit la valeur du compte A de X€ et augmente la valeur du compte B de X€. Si au départ le compte A a moins de X€, la fonction de transition d'état renvoie une erreur. Par conséquent, on peut formellement définir :
 
@@ -72,7 +72,7 @@ La première moitié de la première étape empêche les expéditeurs de transac
 
 ### Minage
 
-![block_picture.jpg](http://vitalik.ca/files/block_picture.png)
+![block_picture.jpg](images/block_picture.png?raw=true)
 
 Si nous avions accès à un service centralisé digne de confiance, ce système serait trivial à mettre en œuvre ; il pourrait être codé exactement comme il a été décrit plus haut, en utilisant le disque dur d'un serveur centralisé pour garder une trace de l'état. Cependant, avec Bitcoin, nous essayons de construire un système monétaire décentralisé et nous avons donc besoin de combiner le système de transition d'état avec un système de consensus afin d'assurer que tout le monde est d'accord sur l'ordre des transactions. Le processus de consensus décentralisé de Bitcoin nécessite que les nœuds du réseau tentent en continu de produire des paquets de transactions appelés « blocs ». Le réseau est destiné à créer un bloc environ toutes les dix minutes, chaque bloc contenant un horodatage, un nonce, une référence au bloc précédent (c.à.d. son empreinte) et une liste de toutes les transactions qui ont eu lieu depuis le bloc précédent. Au fil du temps, cela crée une « blockchain » persistante, sans cesse croissante, qui se met continuellement à jour pour représenter le dernier état du registre Bitcoin.
 
@@ -102,7 +102,7 @@ Une fois que l'étape (1) a eu lieu, après quelques minutes un mineur inclura l
 
 ### Les arbres de Merkle
 
-![SPV dans bitcoin](https://raw.githubusercontent.com/ethereum/www/master-postsale/src/extras/gh_wiki/spv_bitcoin.png)
+![SPV dans bitcoin](images/spv_bitcoin.png?raw=true)
 
 _À gauche : il suffit de ne présenter qu'un petit nombre de nœuds d'un arbre de Merkle pour donner la preuve de la validité d'une branche_
 
@@ -185,7 +185,7 @@ Il faut noter que l'allocation en gaz assignée par une transaction ou un contra
 
 ### Fonction de transition d'état Ethereum
 
-![ethertransition.png](http://vitalik.ca/files/ethertransition.png?1)
+![ethertransition.png](images/ethertransition.png?raw=true)
 
 La fonction de transition d'état Ethereum, `APPLY(S,TX) -> S'` peut être définie de la manière suivante :
 
@@ -228,7 +228,7 @@ Le modèle d'exécution formelle du code EVM est étonnamment simple. Alors que 
 
 ### Blockchain et minage
 
-![apply_block_diagram.png](http://vitalik.ca/files/apply_block_diagram.png)
+![apply_block_diagram.png](images/apply_block_diagram.png?raw=true)
 
 La blockchain Ethereum est en de nombreux points similaire à celle de Bitcoin, bien qu'elle présente des différences. La principale différence entre Ethereum et Bitcoin en ce qui concerne l'architecture de la blockchain est que, contrairement à Bitcoin, les blocs Ethereum contiennent à la fois une copie de la liste des transactions et de l'état le plus récent. Hormis cela, deux autres valeurs, le numéro de bloc et la difficulté, sont aussi stockés dans le bloc. L’algorithme basique de validation de bloc Ethereum est le suivant :
 
@@ -431,7 +431,7 @@ Le protocole d'émission sera le suivant :
 
 **Taux de croissance de l'approvisionnement à long terme (pourcentages)**
 
-![SPV de bitcoin](https://www.ethereum.org/gh_wiki/inflation.svg)
+![SPV de bitcoin](images/inflation.png?raw=true)
 
 _Malgré l’émission de monnaie linéaire, la progression de l'approvisionnement, tout comme avec Bitcoin, tend vers zéro_
 

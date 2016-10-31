@@ -1,3 +1,3 @@
 # Ethereum White Paper - French Translation
 
-Big thanks to Stéphane Roche, Jean Zundel, @chocapeek, Alexandre Kurth and Etienne Jouin
+Big thanks to Stéphane Roche, Jean Zundel, Frédéric Jacquot, Alexandre Kurth and Etienne Jouin
